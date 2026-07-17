@@ -105,69 +105,19 @@ Teardown: `docker rm -f medusa-pg medusa-redis`
 
 ---
 
-## 6. How to use the tool
+## 6. Project documentation & policies (required reading)
 
-Medusa provides the building blocks of an e-commerce platform: product catalog, carts, orders,
-pricing, promotions, inventory, payments, and an admin dashboard — exposed through Store and Admin
-REST APIs and customizable via modules and workflows.
+📚 **Official documentation:** <https://docs.medusajs.com> — framework concepts at
+[docs.medusajs.com/learn](https://docs.medusajs.com/learn), API reference at
+[docs.medusajs.com/api](https://docs.medusajs.com/api).
 
-- Scaffold a store (step 3), then manage products/orders in the **admin** at `http://localhost:9000/app`.
-- Explore the **Store & Admin APIs**: <https://docs.medusajs.com/api>.
-- Learn the framework concepts (modules, workflows, API routes): <https://docs.medusajs.com/learn>.
-- Architecture and code patterns used in this repo: see `CLAUDE.md` in the repo root.
+Medusa has its own established contribution processes. They are **not restated here** — you are
+responsible for finding, reading, and following them from the sources below:
 
----
-
-## 7. How to review the code
-
-Code review is part of the work, not an afterthought:
-
-1. Read the linked issue first, then the diff (GitHub → **Files changed**).
-2. Check out the branch locally, build, and run the relevant tests
-   (`yarn workspace @medusajs/<pkg> test`).
-3. Leave **line comments** for specific problems and finish with a summary review —
-   **Approve** or **Request changes**.
-4. Look for: correctness, tests covering the new behavior, naming/clarity, and unintended
-   changes (lockfiles, build artifacts, formatting noise).
-
-Every PR needs at least **one teammate approval** before merge — no self-merges. Review the code,
-not the person; be specific and constructive.
-
----
-
-## 8. Pull requests (PRs)
-
-1. Branch off `develop`: `git checkout -b feature/<short-name>` (or `fix/<issue-number>-<slug>`).
-2. Keep commits small with meaningful messages.
-3. Run the tests (section 4) before pushing.
-4. Push to the course fork and open the PR against the course fork's `develop` — **never upstream**.
-5. In the description: what changed, why, how you tested it, and the linked issue (`Closes #12`).
-6. Address review comments with follow-up commits (avoid force-pushes during review), then
-   re-request review.
-
----
-
-## 9. Issue resolution process
-
-1. All work is tracked as **GitHub Issues** on the course fork — bug, feature, or task.
-2. Before coding: pick or create an issue, get it **assigned** to you, and outline your approach
-   in a comment if it's non-trivial.
-3. One issue → one branch → one PR, linked with `Closes #<n>` so the issue closes automatically
-   on merge.
-4. Blocked for more than a day? Say so on the issue (what you tried, where you're stuck) instead
-   of going quiet.
-5. An issue is **done** when its PR is merged and the behavior is verified.
-
----
-
-## 10. AI policies
-
-AI assistants (Claude, ChatGPT, Copilot, …) are allowed as a learning and productivity aid,
-under these rules:
-
-- **You are the author.** Understand and be able to explain every line you submit — "the AI
-  wrote it" is never an explanation.
-- **Test before you commit.** Never push AI-generated code you haven't run and tested locally.
-- **Disclose it.** Note meaningful AI assistance in the PR description
-  (e.g. *"AI-assisted: first draft of the workflow + its tests"*).
-- **Protect data.** Never paste secrets, tokens, or private data into AI tools.
+| You must take care of | Where to find it |
+| --- | --- |
+| How to use the tool | <https://docs.medusajs.com> |
+| Code review process | [CONTRIBUTING.md — Pull Requests](CONTRIBUTING.md#pull-requests) |
+| Bug / issue resolution process | [CONTRIBUTING.md — Issues before PRs](CONTRIBUTING.md#issues-before-prs) |
+| Pull request conventions & PR policies | [CONTRIBUTING.md — Workflow](CONTRIBUTING.md#workflow) (branches, commits, PRs) |
+| AI policies | [CLAUDE.md](CLAUDE.md) (this repo's AI conventions); check [CONTRIBUTING.md](CONTRIBUTING.md) for the current policy |
